@@ -1,0 +1,17 @@
+application: glass-daily-card
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /dailyjob
+  login: admin
+  script: main.glassdailycard
+- url: /samplesforcron
+  login: admin
+  script: main.glassdailycard
+- url: /static
+  static_dir: static
+- url: /.*
+  script: main.glassdailycard

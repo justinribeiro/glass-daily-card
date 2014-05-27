@@ -1,0 +1,4 @@
+cron:
+- description: daily card sent job
+  url: /dailyjob
+  schedule: every day 13:00

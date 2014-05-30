@@ -166,6 +166,7 @@ def disconnect():
         user_properties = ndb.Key(UserProperties, userid).get()
         user_properties.key.delete()
 
+        # Delete the sessions for the user
         del session['credentials']
         del session['user_id']
 
@@ -180,7 +181,7 @@ def disconnect():
 
 @glassdailycard.route('/dailyjob')
 def dailyjob():
-    """Ensure that the request is correct in every way."""
+    """This is run by the cron job. Check cron.yaml to see when."""
 
     # Get today's card
     today = datetime.date.today()

@@ -18,8 +18,7 @@ git clone https://github.com/justinribeiro/glass-daily-card.git
 
 2. Install the requirements so that our project will run (Flask, kvsession, httplib2, et cetera)
 ```
-pip install -r requirements.txt
-```
+pip install -r requirements.txt -t lib
 
 3. Replace client_secrets.json with the credentials you created in step 3 of the prerequisites (use "Download JSON" button).
 4. Replace the content for the google-signin-clientid meta tag in templates/base.html with your web application client id. Maybe visit the link in the comment above that line and learn more about page level configuration for Google+ Sign In.
